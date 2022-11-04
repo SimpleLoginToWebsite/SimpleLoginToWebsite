@@ -1,0 +1,168 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadein {from{opacity:0%;}to{opacity: 100%;}}
+
+body {
+    background: #545;
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid black;
+    background: #120021;
+    border-radius: 12px;
+    box-shadow: 0px 5px 50px rgba(255,155,255,.4);
+}
+
+h1 {
+    font-size: 50px;
+    margin: 30px auto;
+    color: #888;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: 5px;
+}
+
+.data-input {
+    width: 450px;
+    height: 40px;
+    margin: 0;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 8px;
+    background: #342243;
+    border: 0px;
+    color: #aaa;
+}
+
+input::placeholder {
+    color: #444;
+}
+
+h2 {
+    padding: 0px;
+    margin-left: 0px;
+    margin: 6px 0px;
+    color: #555;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px auto;
+}
+
+.login-button {
+    padding: 15px 45px;
+    font-size: 26px;
+    background: #453354;
+    border: 0;
+    color: #777;
+    border-radius: 5px;
+}
+
+@keyframes glow-on-hover {
+    from {
+        background-color: #453354;
+        box-shadow: 0 5px 15px rgba(69, 51, 84, 0);
+        color: #777;
+    }
+    to {
+        background-color: #896687;
+        box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+        color: #fff;
+    }
+}
+
+@keyframes deglow {
+    from {
+        background-color: #896687;
+        box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+        color: #fff;
+    }
+    to {
+        background-color: #453354;
+        box-shadow: 0 5px 15px rgba(69, 51, 84, 0);
+        color: #777;
+    }
+}
+  
+
+button.login-button:hover {
+    animation-name: glow-on-hover;
+    animation-duration: 300ms;
+    background-color: #896687;
+    box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+    color: #fff;
+}
+
+.login-button:not(:hover) {
+    animation-name: deglow;
+    animation-duration: 300ms;
+}
+
+@keyframes input-glow {
+    from {
+        background: #342243;
+        box-shadow: 0 0 40px rgba(120, 85, 118, 0);
+        color: #aaa;
+    }
+    to {
+        background: #675576;
+        box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+        color: #fff;
+    }
+}
+
+.data-input:hover {
+    background-color: #675576;
+    box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+    color: white;
+    animation-name: input-glow;
+    animation-duration: 300ms;
+}
+
+.data-input:focus {
+    border: 0;
+    background-color: #786687;
+    box-shadow: 0 0 40px rgba(120, 85, 118, 0.9);
+    color: white;
+    outline: none;
+}
+
+.login-button-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
